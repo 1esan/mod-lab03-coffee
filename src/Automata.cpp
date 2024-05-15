@@ -92,7 +92,7 @@ void Automata::cook() {
         cout << "Can't cook in this state\n";
     }
 }
- 
+
 void Automata::finish() {
     if (state == COOK) {
         state = WAIT;
