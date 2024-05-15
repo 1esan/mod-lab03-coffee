@@ -86,6 +86,10 @@ void Automata::cook() {
         } else {
             cout << "Not enough cash\n";
         }
+} else {
+        cout << "Can't cook in this state\n";
+    }
+}
     
 void Automata::finish() {
     if (state == COOK) {
