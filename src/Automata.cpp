@@ -1,3 +1,5 @@
+// Copyright 2024
+
 #include "Automata.h"
 
 Automata::Automata() {
