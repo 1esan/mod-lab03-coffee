@@ -1,3 +1,5 @@
+// Copyright 2024
+
 #ifndef INCLUDE_AUTOMATA_H_
 #define INCLUDE_AUTOMATA_H_
 
@@ -39,3 +41,5 @@ class Automata {
     int choice_;
     int current_price;
 };
+
+#endif // INCLUDE_AUTOMATA_H_
