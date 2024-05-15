@@ -38,4 +38,4 @@ class Automata {
     int cash;
     int choice_;
     int current_price;
-};
+
