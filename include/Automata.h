@@ -1,45 +1,28 @@
-// Copyright 2024
-
-#ifndef INCLUDE_AUTOMATA_H_
-#define INCLUDE_AUTOMATA_H_
-
-#include <iostream>
-#include <string>
+// Copyright 2024 UNN-IASR
+#pragma once
 #include <vector>
-
-using std::vector;
-using std::string;
-using std::cout;
-using std::endl;
+#include <string>
 
 class Automata {
  public:
-    Automata();
-    enum State {
-        OFF,
-        WAIT,
-        ACCEPT,
-        CHECK,
-        COOK
-    };
+    Automata(std::vector<std::string> menu, std::vector<int> prices);
     void on();
     void off();
-    void coin(int money);
-    void printMenu();
-    void choice(int item);
+    void coin(int sum);
+    std::string getMenu();
+    std::string getState();
+    void choice(int drinkIndex);
     void cancel();
-    void cook();
-    void finish();
-    Automata::State getState();
-    int getCash();
 
  private:
-    State state;
-    vector<string> menu;
-    vector<int> prices;
-    int cash;
-    int choice_;
-    int current_price;
-};
+    void check(int drinkIndex);
+    void cook(int drinkIndex);
+    void finish();
 
-#endif // INCLUDE_AUTOMATA_H_
+ private:
+    enum STATES { OFF, WAIT, ACCEPT, CHECK, COOK };
+    int _cash;
+    std::vector<std::string> _menu;
+    std::vector<int> _prices;
+    STATES _state;
+};
